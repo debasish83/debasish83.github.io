@@ -517,15 +517,79 @@ qpSolverEquality.updateEquality(Array[Double](1.0))
 </section>
 
 <section>
-	<h2>Future work</h2>
-	<ul>
-		<li>Release QpSolver-Spark after rigorous testing</li>
-		<li>Runtime optimizations for QpSolver-Spark integration</li>
-		<li>Matrix Factorization using Gram Matrix broadcast</li>
-		<li>Release ECOS based LP and SOCP solvers based on community feedback</li>
-		<li>BFGS/CG based IterativeQpSolver for large ranks with application to Kernel-SVMs</li>
-		<li>QpSolver-Spark applications to Verizon datasets</li>
-	</ul>
+  <h3>QP : Default ADMM</h3>
+  <pre><code>def ADMM(R: DoubleMatrix): DoubleMatrix = {
+      rho = 1.0
+  alpha = 1.0
+  while (k &le; MAX_ITERS) {
+    scale = rho*(z - u) - q
+    // x = R \ (R' \ scale)
+    solveTriangular(R, scale)        
+    //z-update with relaxation
+    zold = (1-alpha)*z
+    x_hat = alpha*x + zold   	
+    z = xHat + u
+    
+    Proximal(z)
+      if(converged(x, z, u)) return x
+      k = k + 1
+      }
+}
+</code></pre>																								
+</section>
+
+<section>
+  <h3>QP: Accelerated ADMM</h3>
+<pre><code>def ADMM(R: DoubleMatrix): DoubleMatrix = {
+  rho = 1.0
+  alpha = 1.0
+  while (k &le; MAX_ITERS) {
+    zold = z
+    uold = u
+    alphaOld = alpha
+    scale = rho*(z - u) - q
+    // x = R \ (R' \ scale)
+    solveTriangular(R, scale)        
+    //z-update without relaxation
+    z = x + u
+    
+    Proximal(z)
+    updateRho(x,z,u)
+    if(converged(x, z, u)) return x
+    k = k + 1
+    //Nesterov's acceleration
+    alphaSolve = (1 + sqrt(1 + 4*alphaOld*alphaOld))/2
+    val alphaScaled = (1 - alphaOld)/alphaSolve
+      
+    //z-acceleration
+    zold.subi(z).muli(alphaScaled)
+    z.addi(zOld)
+      
+    //u-acceleration
+    uOld.subi(u).muli(alphaScaled)
+    u.addi(uOld)
+    }
+}
+</code></pre>																								
+</section>
+
+<section>
+  <h3>QP: Accelerated ADMM Matlab validation</h3>
+  <p> Comparison of ECOS, MOSEK, ADMM and Accelerated ADMM for matlab random
+  matrices </p>
+</section>
+
+<section>
+  <h2>Future work</h2>
+  <ul>
+    <li>Release QpSolver-Spark after rigorous testing</li>
+    <li>Runtime optimizations for QpSolver-Spark integration</li>
+    <li>Release ECOS based LP and SOCP solvers based on community
+    feedback</li>
+    <li>Constrained Convex Minimizer with ADMM</li> 
+    <li>QpSolver-Spark for unguided profile generation</li>
+    <li>QpSolver-Spark for topic modeling</li>
+  </ul>
 </section>
 
 <section>
