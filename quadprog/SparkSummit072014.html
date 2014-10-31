@@ -519,7 +519,7 @@ qpSolverEquality.updateEquality(Array[Double](1.0))
 <section>
   <h3>QP : Default ADMM</h3>
   <pre><code>def ADMM(R: DoubleMatrix): DoubleMatrix = {
-      rho = 1.0
+  rho = 1.0
   alpha = 1.0
   while (k &le; MAX_ITERS) {
     scale = rho*(z - u) - q
@@ -531,11 +531,21 @@ qpSolverEquality.updateEquality(Array[Double](1.0))
     z = xHat + u
     
     Proximal(z)
-      if(converged(x, z, u)) return x
-      k = k + 1
-      }
+    if(converged(x, z, u)) return x
+    k = k + 1
+  }
 }
 </code></pre>																								
+</section>
+
+<section>
+  <h3>Proximal Algorithms</h3>
+  <div align="left">
+    <p>
+      <li>Positivity</li>
+      <li>L1 regularization</li>
+      <li>Equality constraint with positivity</li>
+    </p>
 </section>
 
 <section>
@@ -562,21 +572,31 @@ qpSolverEquality.updateEquality(Array[Double](1.0))
     val alphaScaled = (1 - alphaOld)/alphaSolve
       
     //z-acceleration
-    zold.subi(z).muli(alphaScaled)
-    z.addi(zOld)
-      
+    z = z + (z - zold)*alphaScaled
+    
     //u-acceleration
-    uOld.subi(u).muli(alphaScaled)
-    u.addi(uOld)
-    }
+    u = u + (u - uold)*alphaScaled
+  }
 }
 </code></pre>																								
 </section>
 
 <section>
   <h3>QP: Accelerated ADMM Matlab validation</h3>
-  <p> Comparison of ECOS, MOSEK, ADMM and Accelerated ADMM for matlab random
-  matrices </p>
+  <p> 
+    Comparison of ECOS, MOSEK, ADMM and Accelerated ADMM for Matlab random
+    matrices 
+  </p>
+</section>
+
+<section>
+  <h2>Usecases</h2>
+  <ul>
+    <li>QpSolver-Spark for unguided profile generation</li>
+    <li>QpSolver-Spark for topic modeling</li>
+    <li>Discrimnant Analysis for "bestbuy" segment</li>
+    <li>Constrained Convex Minimizer: PLSA/LDA</li>
+  </ul>
 </section>
 
 <section>
@@ -584,11 +604,9 @@ qpSolverEquality.updateEquality(Array[Double](1.0))
   <ul>
     <li>Release QpSolver-Spark after rigorous testing</li>
     <li>Runtime optimizations for QpSolver-Spark integration</li>
-    <li>Release ECOS based LP and SOCP solvers based on community
-    feedback</li>
-    <li>Constrained Convex Minimizer with ADMM</li> 
-    <li>QpSolver-Spark for unguided profile generation</li>
-    <li>QpSolver-Spark for topic modeling</li>
+    <li>Release ECOS based LP and SOCP solvers based on community feedback</li>
+    <li>Iterative Quadratic Minimizer with ADMM</li>
+    <li>Constrained Convex Minimizer with ADMM</li>
   </ul>
 </section>
 
