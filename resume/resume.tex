@@ -1,0 +1,281 @@
+% LaTeX resume using res.cls
+\documentclass[margin]{res}
+\usepackage{hyperref}
+%\usepackage{helvetica} % uses helvetica postscript font (download helvetica.sty)
+%\usepackage{newcent}   % uses new century schoolbook postscript font 
+\setlength{\textwidth}{5.1in} % set width of text portion
+
+\begin{document}
+
+% Center the name over the entire width of resume:
+ \moveleft\hoffset\centerline{\large\bf Debasish Das}
+% Draw a horizontal line the whole width of resume:
+ \moveleft\hoffset\vbox{\hrule width\resumewidth height 1pt}\smallskip
+% address begins here
+% Again, the address lines must be centered over entire width of resume:
+ \moveleft\hoffset\centerline{3560 Flora Vista Ave, Apt \# 223}
+ \moveleft\hoffset\centerline{Santa Clara, CA 95051}
+ \moveleft\hoffset\centerline{Email: debasish.das83@gmail.com}
+ \moveleft\hoffset\centerline{(312) 354-0014}
+
+\begin{resume}
+
+\section{OBJECTIVE} A challenging software engineering position in the field
+of large scale global optimization and mathematical modeling.
+
+\section{EDUCATION} {\sl Doctoral in Computer Engineering} GPA : 3.9/4.0\\
+Department of Electrical Engineering and Computer Science,\\
+Robert R McCormick School of Engineering and Applied Sciences,\\ 
+Northwestern University, Evanston, USA
+
+{\sl Bachelor of Technology (B.Tech, Hons, 2004)} GPA : 8.3/10.0\\
+Department of Computer Science and Engineering\\
+India Institute of Technology, Kharagpur, India
+
+\section{TECHNICAL SKILLS}
+\begin{itemize} \itemsep -2pt
+\item Languages: C++, Python, Java, Javascript, Tcl, Visual C++, Verilog
+\item Tools: gdb, lex, yacc, gprof, CPLEX, AMPL, TLA+, Mentor Graphics EDA Suite, Synopsys DC/ICC
+\end{itemize}
+
+\section{OPEN SOURCE}
+\begin{itemize} \itemsep -2pt
+\item \href{www.stalkerbot.com}{StalkerBot} aggregates sentiments of Hacker News 
+  user on a particular article based on the associated comments. 
+  The application uses Diffbot API for tag generation and EffectCheck API for
+  sentiment generation. Conceived and prototyped at AOL/StartX/Diffbot
+  Hackathon.\href{https://github.com/debasish83/StalkerBot}{(Code)}
+\item \href{https://github.com/debasish83/liblbfgs}{LBFGS solver for convex optimization}
+\item \href{https://github.com/debasish83/sprinklersystem}{Java Simulator for
+  Garden Sprinkler System}
+\end{itemize}
+
+\section{ACHIEVEMENTS}
+\begin{itemize} \itemsep -2pt
+\item Place and Route Division, Mentor Graphics Excellence Award for architecting the multithreaded direct timing engine to drive timing driven placement.
+\item Place and Route Group Excellence Award for developing the timing driven placement engine TESLA and replace the old offering with the new engine.  
+\item Nominated for Intel Foundation PhD Fellowship from Robert R McCormick School of Engineering and Applied Sciences, Northwestern University for year 2007.
+\item Awarded Walter P Murphy Fellowship by the Department of Electrical Engineering and Computer Science, Robert R McCormick School of Engineering and Applied 
+  Sciences, Northwestern University for 2004-2005.
+\end{itemize}
+
+\section{IMMIGRATION STATUS}
+EB1-OR EAD card, AC21 Jan 2nd 2013, Green Card Expected Jan 2013
+
+\section{EXPERIENCE}
+
+{\sl Staff Research and Design Engineer} \hfill April 2012 - Present\\
+Synopsys Inc, Mountain View, CA, USA\\
+Advisor: Will Naylor
+\begin{itemize} \itemsep -2pt
+\item Generating timing models from post-routed sign-off timing data using
+  physical models and convex machine learning techniques 
+  (nonlinear regression). For solution QoR and runtime, compared
+  effectiveness of Batch/Stochastic Gradient Descent, Conjugate Direction, 
+  Conjugate Gradient and L-BFGS-B solvers.
+\item Benchmarked internal network simplex solvers with cost scaling
+  push-relabel algorithm and IBM CPLEX network optimizer. Network flow 
+  solvers are used in density optimization for top level fragmented floorplans.
+\end{itemize}
+
+{\sl Member of Consulting Staff} \hfill May 2011 - Present\\
+Magma Design Automation, San Jose, CA, USA (Acquired by Synopsys Inc)\\
+Manager: Saurabh Adya
+\begin{itemize} \itemsep -2pt
+\item Developed algorithms to solve quadratic programs with nonlinear
+  objectives derived from performance and legality constraints of VLSI circuit
+  placement in Talus Vortex and Talus FX platform.
+\item Developed timing objective driven placement algorithms for quadratic 
+  programming based placement framework.
+\item Used multithreading and streaming instructions to generate efficient
+  implementation of the proposed optimization algorithms.
+\end{itemize}
+
+{\sl Place and Route Development Engineer} \hfill September 2009 - May 2011\\
+Mentor Graphics, San Jose, CA, USA\\
+Manager: Arash Hassibi and Phiroze Parakh
+\begin{itemize} \itemsep -2pt
+\item Developed an automatic differentiation engine (Direct Timing) for handling timing constraints in an analytical
+timing framework. This engine is used to generate derivatives of timing QoR metrices (TNS and WNS) with respect to placement coordinates.
+\item Developed the vectorized and scalable multithreaded version(3X faster on 1 thread and 6X faster on 4 threads than production Timer) of Direct Timing engine. 
+\item Developed analytical placement algorithms that use Direct Timing to generate descent direction and guide analytical placer to produce better timing QoR(TNS and WNS) 
+without affecting wirelength and routability metrics.
+\item Developed Augmented Lagrangian based algorithms using core Quasi Newton Solvers (L-BFGS/L-BFGS-B) to solve large scale nonlinear/linear constrained 
+optimization problems (tested upto 100M nodes and edges) involving wirelength, spread and direct timing modules. 
+\end{itemize}
+
+{\sl Research Assistant} \hfill Spring 2005 - August 2009\\
+EECS Department, Northwestern University, Evanston, IL, USA\\
+Advisor: Professor Hai Zhou
+\begin{itemize} \itemsep -2pt
+\item Developed algorithms and charge sharing based models to improve efficiency and accuracy of
+  iterative Static timing analysis with crosstalk effects for early stages of design cycle. 
+  Industry collaborators were Strategic CAD Lab, Intel and Faraday Technology.
+\item Developed a sub-gradient optimizer for general gate sizing problem. Assuming the convexity
+  on gate delays, developed an efficient method of feasible direction based solver to improve the 
+  efficiency of general purpose sub-gradient optimizer (which is the state-of-the art algorithm for 
+  sizing used in industry). This project is supported in parts by a NSF grant and a grant from 
+  Intel. 
+\item Developed an efficient incremental algorithm for minimum period retiming
+  in general delay models for NSF supported project. Our algorithm achieved average 
+  performance and memory improvements of 100X and 40X over previously proposed algorithm.
+\end{itemize}
+
+{\sl Research Assistant} \hfill Fall 2004 - Winter 2005\\
+EECS Department, Northwestern University, Evanston, IL, USA\\
+Advisor: Professor Seda Memik
+\begin{itemize} \itemsep -2pt
+\item Developed an algorithm to save leakage power in FPGAs using multiplexer shutdown.
+\item Developed a tool based on VPR for the analysis of routing patterns in FPGAs.
+\end{itemize}
+
+{\sl Graduate Summer Intern} \hfill Fall 2007 - Winter 2008\\
+Magma Design Automation, San Jose, CA, USA\\ 
+Advisor: Dr. William Scott
+\begin{itemize} \itemsep -2pt
+\item Developed a current based model to improve efficiency and accuracy of crosstalk 
+  induced delta delay computation for coupling analysis in late design stages. Model is generated
+  from delay and slew tables rather than ECSM/CCSM data.
+\item Reviewed state-of-the-art coupling analysis algorithms and found their ineffectiveness with
+  extreme interconnect scaling for present and future process nodes.
+\item Developed an algorithm based on the convexity of aggressor alignment curve to compute
+  spice accurate crosstalk delta delay improving the ineffectiveness of present analysis algorithms.
+\end{itemize}
+    
+{\sl Graduate Summer Intern} \hfill Summer 2007\\
+Circuit Simulation Group, Intel Corporation, Santa Clara, CA, USA\\
+Manager: Dr. Eric Grimme
+\begin{itemize} \itemsep -2pt
+\item Improved the complexity of general purpose transistor sizing by removing the constraints using
+  lagrange multipliers from cell based sizer.
+\item Developed a hybrid algorithm to merge sub-gradient optimization techniques used in standard cell
+  based sizer with nonlinear optimization techniques used for transistor sizing.
+\end{itemize}
+
+{\sl Graduate Summer Intern} \hfill Summer 2006\\
+Strategic CAD Lab, Intel Corporation, Hillsboro, OR, USA\\
+Manager: Dr. Noel Menezes\\
+Advisor: Kip Killpack and Dr. Chandramouli Kashyap
+\begin{itemize} \itemsep -2pt
+\item Developed an iterative algorithm for pessimism reduction in static timing analysis in presence 
+  of crosstalk using logic and timing filtering. 
+\item Derived a sensitivity based metric to select important aggressors for logic constraints analysis.
+\end{itemize}
+
+{\sl Graduate Summer Intern} \hfill Summer 2005\\
+Calypto Design System Inc, San Jose, CA, USA\\
+Manager: Dr. Sumit Roy\\
+Advisor: Rajat Subhra Mukerjee and Abhishek Ranjan
+\begin{itemize} \itemsep -2pt
+\item Enhancements to SLEC Optimization engine like propagating constants across different types, 
+  optimization of scan-latch designs and strength reductions.
+\item Developed an efficient timing macromodeling algorithm for word level static timing analysis.
+  For timing analysis of system level designs, fast generation of accurate timing macromodel 
+  for system level blocks are essential. 
+\end{itemize}
+
+\section{REFERRED PUBLICATIONS}
+\begin{itemize} \itemsep -2pt
+\item Somsubhra Mondal, Debasish Das and Seda Memik. Hierarchical LUT Structures for Leakage Power 
+  Reduction, Poster Paper, Proc. International Symposium on FPGAs (FPGA), Monterey, CA, 2005.
+\item Debasish Das, Ahmed Shebaita, Hai Zhou, Yehea Ismail and Kip Killpack. FA-STAC: A Framework 
+  for Fast and Accurate Static Timing Analysis with Coupling, IEEE International Conference on 
+  Computer Design (ICCD), San Jose, CA, 2006.
+\item Debasish Das, Ahmed Shebaita, Yehea Ismail, Hai Zhou and Kip Killpack. Nostra-XTalk: A Predictive 
+  Framework for Accurate Static Timing Analysis in UDSM VLSI Circuits, ACM Great Lakes Symposium on VLSI (GLSVLSI), 
+  Stresa, Italy, 2007.
+\item Jia Wang, Debasish Das and Hai Zhou. Gate Sizing by Lagrangian Relaxation Revisited, IEEE/ACM 
+  International Conference on Computer-Aided Design (ICCAD), San Jose, CA, 2007
+\item Debasish Das, Kip Killpack, Chandramouli Kashyap, Abhijit Jas and Hai Zhou. Pessimism Reduction in
+  Coupling Aware Static Timing Analysis Using Timing and Logic Filtering, IEEE/ACM Asia and South Pacific 
+  Design Automation Conference (ASPDAC), Seoul, Korea, 2008. (Best Paper Award Nominee : 10/350)
+\item Debasish Das, William Scott, Shahin Nazarian and Hai Zhou. An efficient Current Based Logic Cell
+  Model for Crosstalk Delay Analysis, Accepted to International Symposium on Quality Electronic Design (ISQED), 
+  San Jose, CA, 2009.
+\item Debasish Das, Jia Wang and Hai Zhou. iRetILP: An efficient incremental algorithm for min-period
+  retiming under general delay model, Accepted to IEEE/ACM Asia and South Pacific 
+  Design Automation Conference (ASPDAC), Hsinchu, Taiwan, 2010.
+\item Jia Wang, Debasish Das, and Hai Zhou. Gate Sizing by Lagrangian Relaxation Revisited. Accepted to
+  IEEE Transactions on Computer-Aided Design (TCAD).
+\item Debasish Das, Ahmed Shebaita, Hai Zhou, Yehea Ismail and Kip Killpack. FA-STAC: An Algorithmic
+  Framework for Fast and Accurate Coupling Aware Static Timing Analysis. Accepted to IEEE
+  Transactions on VLSI (TVLSI).
+\item Debasish Das, Kip Killpack, Chandramouli Kashyap, Abhijit Jas and Hai Zhou, Pessimism Reduction 
+  in Coupling Aware Static Timing Analysis Using Timing and Logic Filtering. Accepted to IEEE 
+  Transactions on Computer-Aided Design (TCAD).
+\item Ahmed Shebaita, Debasish Das, Dusan Petranovic and Yehea Ismail, A Novel Moment Based Framework For
+  Accurate and Efficient Static Timing Analysis. Accepted to IEEE Transactions on Computer-Aided Design (TCAD).
+\end{itemize}
+
+\section{NONREFERRED PUBLICATIONS}
+\begin{itemize} \itemsep -2pt
+\item Debasish Das, Jia Wang and Hai Zhou. iRetILP: An efficient incremental algorithm for min-  retiming under general delay model, Accepted to ACM International Workshop on Timing Issues (TAU), 
+  Austin, TX, 2009.
+\item Debasish Das, William Scott, Shahin Nazarian and Hai Zhou. An Efficient Current Based Logic Cell
+Model for Crosstalk Delay Analysis,ECM workshop, IEEE/ACM International Conference on Computer Aided Design,
+San Jose, CA, 2008.
+\item Abhijit Jas, Kip Killpack, Chandramouli Kashyap, Debasish Das and Hai Zhou. Using Boolean Satisfiability
+  to Eliminate False Aggressor Combinations in Timing Analysis, International Test Synthesis Workshop, 
+  San Antonio, Texas, USA, 2007.
+\item Debasish Das. Symbolic Solver for live variable analysis of high level design languages. Accepted to 
+  IEEE Computer Society Annual Symposium on VLSI, Karlsruhe, Germany, 2006.
+\item Debasish Das, Abhishek Ranjan, Sumit Roy and Venky Ramachandran. Efficient Timing Macromodeling for 
+  Word Level Static Timing Analysis, Internal Report, Calypto Design Systems Inc.
+\end{itemize}
+
+\section{SCORES} 
+\begin{itemize} \itemsep -2pt
+\item GRE: Quantative:800/800 Verbal:550/800 Analytical:4.5/6.0
+\item TOEFL: 270/300, TSE: 45/60
+\end{itemize}
+
+\section{RELEVANT COURSES} {\sl Graduate Courses} \\
+Computer Architecture, VLSI System Design, Introduction to VLSI CAD, 
+Design and Analysis of High Speed ICs, Formal Techniques in Design 
+and Verification of Digital Systems, Design and Analysis of Algorithms, 
+Advanced Algorithms, Seminar on Computer Security and Information Assurance, 
+Random Processes in Communications and Control – I, Advanced Computer 
+Architecture – II, Numerical Methods for Engineers, Mathematical Programming\\
+
+{\sl Undergraduate Courses} \hfill \\
+Programming and Data Structure, Discrete Structures, Switching Circuits and 
+Logic Design, Design and Analysis of Algorithms, Computer Organization and Architecture, 
+Formal Language and Automata Theory, Operating Systems, Computer Networks, Microprocessors 
+and Microcontrollers, Software Engineering, Electronic Design Automation, Artificial 
+Intelligence, Compiler Construction, VLSI System Design, Embedded Systems, Applied Graph 
+Theory, Low power circuits and systems, File Organization and Database Systems, Basic Electronics,
+Electrical Technology, Electromagnetic Engineering, Semiconductor Devices, Probability and 
+Statistics, Signals and Networks, Linear Algebra.
+
+\section{ADDITIONAL ACTIVITIES}
+\begin{itemize} \itemsep -2pt
+\item Reviewer: TCAD, TVLSI, DAC, ICCAD, ISPD, ISQED, TAU, VLSI India
+\item Teaching Assistant for ECE203 (Introduction to Computer Engineering) Fall, Spring 2005, 
+  ECE231 (Advanced Programming for Computer Engineers) Winter 2006, ECE357 (Introduction 
+  to VLSI CAD) Fall 2006, EECS366 (Design and Analysis of Algorithms) Winter 2006.
+\end{itemize}
+
+\section{REFERENCES}
+\begin{itemize} \itemsep -2pt
+\item Dr. Premal Buch, Vice President, Altera Corporation, San Jose, USA\\
+  Email : pbuch@altera.com
+\item Dr. Phiroze Parakh, MTS, Google, Mountain View, USA\\
+  Email : phiroze.parakh@gmail.com
+\item Dr. Arash Hassibi, Software Engineer, iCelero Technologies\\
+  Email : arash.hassibi@gmail.com
+\item Dr. Sumit Roy, Group Director, Synopsys Inc, Mountain View, USA\\
+  Email : sroy@synopsys.com
+\item Professor Hai Zhou, Department of EECS, Northwestern University, USA\\
+  Email : haizhou@eecs.northwestern.edu
+\item Professor Yehea Ismail, Department of EECS, Northwestern University, USA\\
+  Email : ismail@eecs.northwestern.edu
+\item Dr. Noel Menezes, Manager, Strategic CAD Lab, Intel Corporation, USA\\
+  Email : noel.menezes@intel.com
+\item Dr. Eric Grimme, Manager, Circuit Simulation Group, Intel Corporation, USA\\
+  Email : eric.grimme@intel.com
+\item Professor Ajit Pal, Department of CSE, IIT Kharagpur, India\\
+  Email : apal@cse.iitkgp.ac.in
+\end{itemize}
+
+\end{resume}
+\end{document}
