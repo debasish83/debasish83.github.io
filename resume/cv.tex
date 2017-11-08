@@ -1,6 +1,6 @@
 % LaTeX resume using res.cls
 \documentclass[margin]{res}
-\usepackage{hyperref}
+\usepackage[colorlinks]{hyperref}
 %\usepackage{helvetica} % uses helvetica postscript font (download helvetica.sty)
 %\usepackage{newcent}   % uses new century schoolbook postscript font 
 \setlength{\textwidth}{5.1in} % set width of text portion
@@ -8,20 +8,21 @@
 \begin{document}
 
 % Center the name over the entire width of resume:
- \moveleft\hoffset\centerline{\large\bf Debasish Das}
+ \moveleft.5\hoffset\centerline{\large\bf Debasish Das}
 % Draw a horizontal line the whole width of resume:
  \moveleft\hoffset\vbox{\hrule width\resumewidth height 1pt}\smallskip
 % address begins here
 % Again, the address lines must be centered over entire width of resume:
- \moveleft\hoffset\centerline{3560 Flora Vista Ave, Apt \# 223}
- \moveleft\hoffset\centerline{Santa Clara, CA 95051}
- \moveleft\hoffset\centerline{Email: debasish.das83@gmail.com}
- \moveleft\hoffset\centerline{(312) 354-0014}
-
+ \moveleft.5\hoffset\centerline{5069 Xavier Common}
+ \moveleft.5\hoffset\centerline{Fremont, CA 94555}
+ \moveleft.5\hoffset\centerline{Email: debasish.das83@gmail.com}
+ \moveleft.5\hoffset\centerline{Phone: (408) 313-2465}
+ \moveleft.5\hoffset\centerline{\href{https://debasish83.github.io}{Portfolio} 
+ \href{https://www.linkedin.com/in/debasish83/}{LinkedIn}}
 \begin{resume}
 
-\section{OBJECTIVE} A challenging software engineering position in the field
-of large scale global optimization and mathematical modeling.
+\section{OBJECTIVE} Technical Lead position focused on design and
+implementation of large scale data pipelines and machine learning algorithms.
 
 \section{EDUCATION} {\sl Doctoral in Computer Engineering} GPA : 3.9/4.0\\
 Department of Electrical Engineering and Computer Science,\\
@@ -34,35 +35,68 @@ India Institute of Technology, Kharagpur, India
 
 \section{TECHNICAL SKILLS}
 \begin{itemize} \itemsep -2pt
-\item Languages: C++, Python, Java, Javascript, Tcl, Visual C++, Verilog
+\item Languages: Scala, Java, C/C++, Javascript, Python, Tcl, Visual C++, Verilog
+\item Skills: Spark, Lucene, Solr, Cassandra, HBase, Akka, YARN, HDFS, Distributed
+  Systems, Machine Learning, Convex Optimization, Linear Programming,
+  Multithreading, Algorithms, Data Structures, Automatic Differentiation
 \item Tools: gdb, lex, yacc, gprof, CPLEX, AMPL, TLA+, Mentor Graphics EDA Suite, Synopsys DC/ICC
 \end{itemize}
 
 \section{OPEN SOURCE}
 \begin{itemize} \itemsep -2pt
-\item \href{www.stalkerbot.com}{StalkerBot} aggregates sentiments of Hacker News 
-  user on a particular article based on the associated comments. 
-  The application uses Diffbot API for tag generation and EffectCheck API for
-  sentiment generation. Conceived and prototyped at AOL/StartX/Diffbot
-  Hackathon.\href{https://github.com/debasish83/StalkerBot}{(Code)}
-\item \href{https://github.com/debasish83/liblbfgs}{LBFGS solver for convex optimization}
-\item \href{https://github.com/debasish83/sprinklersystem}{Java Simulator for
-  Garden Sprinkler System}
-\end{itemize}
+\item \href{https://github.com/Verizon/trapezium/tree/master/dal} {Data Access Object} for
+  Spark, Lucene and Solr integration to support hybrid row/column storage and
+  search for machine learning flows
 
-\section{ACHIEVEMENTS}
-\begin{itemize} \itemsep -2pt
-\item Place and Route Division, Mentor Graphics Excellence Award for architecting the multithreaded direct timing engine to drive timing driven placement.
-\item Place and Route Group Excellence Award for developing the timing driven placement engine TESLA and replace the old offering with the new engine.  
-\item Nominated for Intel Foundation PhD Fellowship from Robert R McCormick School of Engineering and Applied Sciences, Northwestern University for year 2007.
-\item Awarded Walter P Murphy Fellowship by the Department of Electrical Engineering and Computer Science, Robert R McCormick School of Engineering and Applied 
-  Sciences, Northwestern University for 2004-2005.
-\end{itemize}
+\item \href{https://github.com/Verizon/trapezium/tree/master/framework}
+  {Framework} for building Batch, Streaming and API workflows using Spark and Akka compute
 
-\section{IMMIGRATION STATUS}
-EB1-OR EAD card, AC21 Jan 2nd 2013, Green Card Expected Jan 2013
+\item Contributed \href{https://issues.apache.org/jira/browse/SPARK-3066} {recommendAll} feature to Spark MLlib
+
+\item \href {https://issues.apache.org/jira/browse/SPARK-2426} {Constrained
+  Matrix Factorization} for recommendation and topic modeling\\
+Spark Summit 2014 \href {http://debasish83.github.io/quadprog/SparkSummit072014.html} {Presentation}
+
+\item \href{https://issues.apache.org/jira/browse/SPARK-4823} {Row based similarity computation} and Twitter DimSum comparisons\\
+Spark Meetup 2015 \href{http://debasish83.github.io/spark-meetup-july2015/mf-slides.pdf} {Presentation}
+
+\item \href{https://github.com/scalanlp/breeze/tree/master/math/src/main/scala/breeze/optimize}{Quadratic
+and Nonlinear Programming} solvers using ADMM
+
+\item \href{https://github.com/embotech/ecos-java-scala} {Conic Solver} for JVM and Spark integration
+\end{itemize}
 
 \section{EXPERIENCE}
+
+\section{EXPERIENCE}
+
+{\sl Distinguished Engineer / Software Architect} \hfill May 2013 - Present\\
+Verizon, Palo Alto, CA, USA\\
+Advisor: Ashok Srivastava, Professor Stephen Boyd
+\begin{itemize} \itemsep -2pt
+
+\item Advertising: \href{https://verizoninsights.verizon.com} {Verizon
+  Audience Insight} for building Audience using Temporal, Location,
+  Clickstream and CRM attributes from Verizon Wireless datasets and 
+  serve ads on Oath properties (yearly revenue 25 Million)
+
+\item Marketing: Near-RealTime Lookalike Modeling, Discriminant Analysis and Demand Forecasting for Audience\\
+Spark Summit East 2017 
+\href{https://spark-summit.org/east-2017/events/realtime-analytical-query-processing-and-predictive-model-building-on-high-dimensional-document-datasets-with-timestamps}{Presentation}\\
+Spark Summit East 2016 \href{http://www.slideshare.net/SparkSummit/spark-summit-eu-talk-by-debasish-das-and-pramod-narasimha-68928564}{Presentation}
+
+\item Platform-as-a-Service: Verizon Insight deployment for international carriers powered by \href{https://github.com/Verizon/trapezium}{trapezium} (yearly revenue 10 Million)
+
+\item IoT Security: Streaming DDoS Detection on Verizon Wireline datasets using statistical, autoregressive and k-NN models\\
+Hadoop Summit Tokyo 2016 \href{http://www.slideshare.net/HadoopSummit/near-realtime-network-anomaly-detection-and-traffic-analysis-using-spark-based-lambda-architecture}{Presentation}
+
+\item Architecture validation for OLAP store using Solr, Druid and internally developed LuceneDAO 
+
+\item Leading collaboration across Platform, Data Engineering and Data Science teams to hit timely release schedules
+
+\item Provided technical guidance and coaching to developers, and conducted design discussion, code review and data validation.
+
+\end{itemize}
 
 {\sl Staff Research and Design Engineer} \hfill April 2012 - Present\\
 Synopsys Inc, Mountain View, CA, USA\\
@@ -174,6 +208,20 @@ Advisor: Rajat Subhra Mukerjee and Abhishek Ranjan
   for system level blocks are essential. 
 \end{itemize}
 
+
+\section{ACHIEVEMENTS}
+\begin{itemize} \itemsep -2pt
+\item Verizon Spotlight Award for design and implementation of lambda architecture for streaming anomaly detection flows using Spark, Spark Streaming, Hive and Cassandra.
+\item Place and Route Division, Mentor Graphics Excellence Award for architecting the multithreaded direct timing engine to drive timing driven placement.
+\item Place and Route Group Excellence Award for developing the timing driven placement engine TESLA and replace the old offering with the new engine.  
+\item Nominated for Intel Foundation PhD Fellowship from Robert R McCormick School of Engineering and Applied Sciences, Northwestern University for year 2007.
+\item Awarded Walter P Murphy Fellowship by the Department of Electrical Engineering and Computer Science, Robert R McCormick School of Engineering and Applied 
+  Sciences, Northwestern University for 2004-2005.
+\end{itemize}
+
+\section{IMMIGRATION STATUS}
+Green Card
+
 \section{REFERRED PUBLICATIONS}
 \begin{itemize} \itemsep -2pt
 \item Somsubhra Mondal, Debasish Das and Seda Memik. Hierarchical LUT Structures for Leakage Power 
@@ -249,7 +297,9 @@ Statistics, Signals and Networks, Linear Algebra.
 
 \section{ADDITIONAL ACTIVITIES}
 \begin{itemize} \itemsep -2pt
-\item Reviewer: TCAD, TVLSI, DAC, ICCAD, ISPD, ISQED, TAU, VLSI India
+\item Advisory Council member of \href{http://www.spark.tc/}{IBM Spark Technology Center} 
+\item Reviewer for SIAM Data Mining, ICDM, TCAD, TVLSI, DAC, ICCAD, ISPD,
+  ISQED, TAU and VLSI India
 \item Teaching Assistant for ECE203 (Introduction to Computer Engineering) Fall, Spring 2005, 
   ECE231 (Advanced Programming for Computer Engineers) Winter 2006, ECE357 (Introduction 
   to VLSI CAD) Fall 2006, EECS366 (Design and Analysis of Algorithms) Winter 2006.
@@ -257,24 +307,17 @@ Statistics, Signals and Networks, Linear Algebra.
 
 \section{REFERENCES}
 \begin{itemize} \itemsep -2pt
-\item Dr. Premal Buch, Vice President, Altera Corporation, San Jose, USA\\
-  Email : pbuch@altera.com
+\item Ashok Srivastava, SVP, Intuit Systems, Mountain View, USA\\
+\item Professor Stephen Boyd, Department of EE, Stanford University, USA\\ 
+\item Dr. Premal Buch, CEO, Robin Systems, San Jose, USA\\
 \item Dr. Phiroze Parakh, MTS, Google, Mountain View, USA\\
-  Email : phiroze.parakh@gmail.com
-\item Dr. Arash Hassibi, Software Engineer, iCelero Technologies\\
-  Email : arash.hassibi@gmail.com
+\item Dr. Arash Hassibi, CEO and Founder, Joined App, Palo Alto, USA\\
 \item Dr. Sumit Roy, Group Director, Synopsys Inc, Mountain View, USA\\
-  Email : sroy@synopsys.com
 \item Professor Hai Zhou, Department of EECS, Northwestern University, USA\\
-  Email : haizhou@eecs.northwestern.edu
 \item Professor Yehea Ismail, Department of EECS, Northwestern University, USA\\
-  Email : ismail@eecs.northwestern.edu
 \item Dr. Noel Menezes, Manager, Strategic CAD Lab, Intel Corporation, USA\\
-  Email : noel.menezes@intel.com
 \item Dr. Eric Grimme, Manager, Circuit Simulation Group, Intel Corporation, USA\\
-  Email : eric.grimme@intel.com
 \item Professor Ajit Pal, Department of CSE, IIT Kharagpur, India\\
-  Email : apal@cse.iitkgp.ac.in
 \end{itemize}
 
 \end{resume}

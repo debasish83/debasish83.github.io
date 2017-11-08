@@ -1,0 +1,172 @@
+% LaTeX resume using res.cls
+\documentclass[margin]{res}
+\usepackage[colorlinks]{hyperref}
+%\usepackage{helvetica} % uses helvetica postscript font (download helvetica.sty)
+%\usepackage{newcent}   % uses new century schoolbook postscript font 
+\setlength{\textwidth}{5.1in} % set width of text portion
+
+\begin{document}
+
+% Center the name over the entire width of resume:
+ \moveleft.5\hoffset\centerline{\large\bf Debasish Das}
+% Draw a horizontal line the whole width of resume:
+ \moveleft\hoffset\vbox{\hrule width\resumewidth height 1pt}\smallskip
+% address begins here
+% Again, the address lines must be centered over entire width of resume:
+ \moveleft.5\hoffset\centerline{5069 Xavier Common}
+ \moveleft.5\hoffset\centerline{Fremont, CA 94555}
+ \moveleft.5\hoffset\centerline{Email: debasish.das83@gmail.com}
+ \moveleft.5\hoffset\centerline{Phone: (408) 313-2465}
+ \moveleft.5\hoffset\centerline{\href{https://debasish83.github.io}{Portfolio} 
+ \href{https://www.linkedin.com/in/debasish83/}{LinkedIn}}
+
+\begin{resume}
+
+\section{OBJECTIVE} Technical Lead role focused on design and
+implementation of large scale data pipelines and machine learning algorithms.
+
+\section{EDUCATION} {\sl Doctoral in Computer Engineering} GPA : 3.9/4.0\\
+Department of Electrical Engineering and Computer Science,\\
+Robert R McCormick School of Engineering and Applied Sciences,\\
+Northwestern University, Evanston, USA
+
+{\sl Bachelor of Technology (B.Tech, Hons, 2004)} GPA : 8.3/10.0\\
+Department of Computer Science and Engineering\\
+India Institute of Technology, Kharagpur, India
+
+\section{TECHNICAL SKILLS}
+\begin{itemize} \itemsep -2pt
+\item Languages: Scala, Java, C/C++, Javascript, Python, Tcl, Visual C++, Verilog
+\item Skills: Spark, Lucene, Solr, Cassandra, HBase, Akka, YARN, HDFS, Distributed
+  Systems, Machine Learning, Convex Optimization, Linear Programming,
+  Multithreading, Algorithms, Data Structures, Automatic Differentiation
+\end{itemize}
+
+\section{OPEN SOURCE}
+\begin{itemize} \itemsep -2pt
+\item \href{https://github.com/Verizon/trapezium/tree/master/dal} {Data Access Object} for
+  Spark, Lucene and Solr integration to support hybrid row/column storage and
+  search for machine learning flows
+
+\item \href{https://github.com/Verizon/trapezium/tree/master/framework}
+  {Framework} for building Batch, Streaming and API workflows using Spark and Akka compute
+
+\item Contributed \href{https://issues.apache.org/jira/browse/SPARK-3066} {recommendAll} feature to Spark MLlib
+
+\item \href {https://issues.apache.org/jira/browse/SPARK-2426} {Constrained
+  Matrix Factorization} for recommendation and topic modeling\\
+Spark Summit 2014 \href {http://debasish83.github.io/quadprog/SparkSummit072014.html} {Presentation}
+
+\item \href{https://issues.apache.org/jira/browse/SPARK-4823} {Row based similarity computation} and Twitter DimSum comparisons\\
+Spark Meetup 2015 \href{http://debasish83.github.io/spark-meetup-july2015/mf-slides.pdf} {Presentation}
+
+\item \href{https://github.com/scalanlp/breeze/tree/master/math/src/main/scala/breeze/optimize}{Quadratic
+and Nonlinear Programming} solvers using ADMM
+
+\item \href{https://github.com/embotech/ecos-java-scala} {Conic Solver} for JVM and Spark integration
+\end{itemize}
+
+\section{EXPERIENCE}
+
+{\sl Distinguished Engineer / Software Architect} \hfill May 2013 - Present\\
+Verizon, Palo Alto, CA, USA\\
+Advisor: Ashok Srivastava, Professor Stephen Boyd
+\begin{itemize} \itemsep -2pt
+
+\item Advertising: \href{https://verizoninsights.verizon.com} {Verizon
+  Audience Insight} for building Audience using Temporal, Location,
+  Clickstream and CRM attributes from Verizon Wireless datasets and 
+  serve ads on Oath properties (yearly revenue 25 Million)
+
+\item Marketing: Near-RealTime Lookalike Modeling, Discriminant Analysis and Demand Forecasting for Audience\\
+Spark Summit East 2017 
+\href{https://spark-summit.org/east-2017/events/realtime-analytical-query-processing-and-predictive-model-building-on-high-dimensional-document-datasets-with-timestamps}{Presentation}\\
+Spark Summit East 2016 \href{http://www.slideshare.net/SparkSummit/spark-summit-eu-talk-by-debasish-das-and-pramod-narasimha-68928564}{Presentation}
+
+\item Platform-as-a-Service: Verizon Insight deployment for international carriers powered by \href{https://github.com/Verizon/trapezium}{trapezium} (yearly revenue 10 Million)
+
+\item IoT Security: Streaming DDoS Detection on Verizon Wireline datasets using statistical, autoregressive and k-NN models\\
+Hadoop Summit Tokyo 2016 \href{http://www.slideshare.net/HadoopSummit/near-realtime-network-anomaly-detection-and-traffic-analysis-using-spark-based-lambda-architecture}{Presentation}
+
+\item Architecture validation for OLAP store using Solr, Druid and internally developed LuceneDAO 
+
+\item Leading collaboration across Platform, Data Engineering and Data Science teams to hit timely release schedules
+
+\item Provided technical guidance and coaching to developers, and conducted design discussion, code review and data validation.
+
+\end{itemize}
+
+{\sl Staff Research and Design Engineer} \hfill April 2012 - April 2013\\
+Synopsys Inc, Mountain View, CA, USA
+\begin{itemize} \itemsep -2pt
+\item Generated machine learning models from post-routed sign-off timing data
+\item Network flow solver benchmarking for System-On-Chip density optimization
+\end{itemize}
+
+{\sl Member of Consulting Staff} \hfill May 2011 - March 2012\\
+Magma Design Automation, San Jose, CA, USA (Acquired by Synopsys Inc)
+\begin{itemize} \itemsep -2pt
+\item Developed algorithms to solve quadratic programs with nonlinear 
+objectives derived from performance and legality constraints of VLSI circuit 
+placement
+\end{itemize}
+
+{\sl Place and Route Development Engineer} \hfill September 2009 - May 2011\\
+Mentor Graphics, San Jose, CA, USA
+\begin{itemize} \itemsep -2pt
+\item Developed multi-core graphical automatic differentiation engine for 
+handling soft-max objectives in circuit placement algorithms
+\item Developed Augmented Lagrangian based algorithms using L-BFGS to solve
+  large scale nonlinear constrained optimization problems (tested upto 100M nodes and edges). 
+\end{itemize}
+
+{\sl Research Assistant} \hfill Spring 2005 - August 2009\\
+EECS Department, Northwestern University, Evanston, IL, USA\\
+Advisor: Professor Hai Zhou
+\begin{itemize} \itemsep -2pt
+\item Developed graph algorithms for static timing analysis with crosstalk
+\item Developed lagrangian relaxation based sub-gradient optimizer for gate sizing problem
+\end{itemize}
+
+\section{ACHIEVEMENTS}
+\begin{itemize} \itemsep -2pt
+\item Verizon Spotlight Award for design and implementation of lambda architecture for streaming anomaly detection flows using Spark, Spark Streaming, Hive and Cassandra.
+\item Place and Route Division, Mentor Graphics Excellence Award for architecting the multithreaded direct timing engine to drive timing driven placement.
+\item Place and Route Group Excellence Award for developing the timing driven placement engine TESLA and replace the old offering with the new engine.  
+\item Nominated for Intel Foundation PhD Fellowship from Robert R McCormick School of Engineering and Applied Sciences, Northwestern University for year 2007.
+\item Awarded Walter P Murphy Fellowship by the Department of Electrical Engineering and Computer Science, Robert R McCormick School of Engineering and Applied 
+  Sciences, Northwestern University for 2004-2005.
+\end{itemize}
+
+\section{IMMIGRATION STATUS}
+Green Card
+
+\section{SELECTED PUBLICATIONS}
+\begin{itemize} \itemsep -2pt
+\item Jia Wang, Debasish Das and Hai Zhou. Gate Sizing by Lagrangian Relaxation Revisited, IEEE/ACM 
+  International Conference on Computer-Aided Design (ICCAD), San Jose, CA, 2007
+\item Debasish Das, Kip Killpack, Chandramouli Kashyap, Abhijit Jas and Hai Zhou. Pessimism Reduction in
+  Coupling Aware Static Timing Analysis Using Timing and Logic Filtering, IEEE/ACM Asia and South Pacific 
+  Design Automation Conference (ASPDAC), Seoul, Korea, 2008. (Best Paper Award Nominee : 10/350)
+\item Debasish Das, Jia Wang and Hai Zhou. iRetILP: An efficient incremental algorithm for min-period
+  retiming under general delay model, Accepted to IEEE/ACM Asia and South Pacific 
+  Design Automation Conference (ASPDAC), Hsinchu, Taiwan, 2010.
+\item Ahmed Shebaita, Debasish Das, Dusan Petranovic and Yehea Ismail, A Novel Moment Based Framework For
+  Accurate and Efficient Static Timing Analysis. Accepted to IEEE Transactions on Computer-Aided Design (TCAD).
+\end{itemize}
+
+\section{RELEVANT COURSES}
+Design and Analysis of Algorithms, Advanced Algorithms, Seminar on Computer Security and Information Assurance, 
+Random Processes in Communications and Control, Advanced Computer
+Architecture, Numerical Methods for Engineers, 
+Mathematical Programming, Programming and Data Structure, Discrete Structures,
+Formal Language and Automata Theory, Artificial Intelligence, Applied Graph Theory, Probability and Statistics, Linear Algebra.
+
+\section{ADDITIONAL ACTIVITIES}
+\begin{itemize} \itemsep -2pt
+\item Advisory Council member of \href{http://www.spark.tc/}{IBM Spark Technology Center} 
+\item Reviewer for SIAM Data Mining, ICDM, TCAD, TVLSI, DAC, ICCAD, ISPD, ISQED, TAU and VLSI India
+\end{itemize}
+
+\end{resume}
+\end{document}
